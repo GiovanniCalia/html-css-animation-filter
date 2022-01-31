@@ -56,10 +56,8 @@
 }
 
 .ex-6-img, .ex-7-img, .ex-8-img {
-    width: 500px;
-    
+    width: 500px;   
 }
-
 .ex-6-img:hover{
     filter: grayscale(100%);
 }
@@ -106,7 +104,7 @@
     100% {
       transform: rotate(360deg);
     }
-  }
+}
 
 .ex-11-icon {
     font-size: 60px;
@@ -114,7 +112,6 @@
 .ex-11-icon:hover{
     animation-name: semi-rotate;
     animation-duration: 3s;
-    animation-iteration-count: 1;
 }
 @keyframes semi-rotate {
     0% {
@@ -123,7 +120,7 @@
     75% {
       transform: rotate(270deg);
     }
-  }
+}
 
 .ex-12-button, .ex-13-button {
     position: relative;
@@ -153,4 +150,34 @@
     background: #f5f5f5;
     width: 60px;
     height: 20px;
+}
+
+.ex-12-button:hover .ex-12-top-white{
+    animation-name: top-direction;
+    animation-direction: normal;
+    animation-duration: 3s;
+}
+
+@keyframes top-direction{
+    0%{
+        transform: translate(0);
+    }
+    100%{
+        transform: translate(80px);
+    }
+}
+
+.ex-12-button:hover .ex-12-bottom-white{
+    animation-name: bottom-direction;
+    animation-direction: normal;
+    animation-duration: 3s;
+}
+
+@keyframes bottom-direction{
+    0%{
+        transform: translate(0);
+    }
+    100%{
+        transform: translate(-80px);
+    }
 }
