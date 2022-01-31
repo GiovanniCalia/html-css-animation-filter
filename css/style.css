@@ -160,10 +160,15 @@
 
 @keyframes top-direction{
     0%{
-        transform: translate(0);
+        transform: translateX(0);
     }
+
+    50%{
+        transform: translateX(80px);
+    }
+
     100%{
-        transform: translate(80px);
+        transform: translateX(0);
     }
 }
 
@@ -175,9 +180,92 @@
 
 @keyframes bottom-direction{
     0%{
-        transform: translate(0);
+        transform: translateX(0);
     }
+
+    50%{
+        transform: translateX(-80px);
+    }
+
     100%{
-        transform: translate(-80px);
+        transform: translateX(0);
+    }
+}
+
+.ex-13-button:hover .ex-13-top-white{
+    animation-name: top-direction-circle;
+    animation-direction: normal;
+    animation-duration: 5s; 
+    animation-timing-function: linear;
+}
+
+@keyframes top-direction-circle{
+    0%{
+        top: -10px;
+        left: 10%;
+    }
+    
+    20%{
+        top: -10px;
+        left: 80%;
+    }
+
+    40%{
+        top: 60px;
+        left: 80%;
+    }
+
+    60%{
+        top: 60px;
+        left: -30px;
+    }
+
+    80%{
+        top: -10px;
+        left: -30px;
+    }
+
+    100%{
+        top: -10px;
+        left: 10%;
+    }
+}
+
+.ex-13-button:hover .ex-13-bottom-white{
+    animation-name: bottom-direction-circle;
+    animation-direction: normal;
+    animation-duration: 5s; 
+    animation-timing-function: linear;
+}
+
+@keyframes bottom-direction-circle{
+    0%{
+        bottom: -10px;
+        right: 20%;
+    }
+    
+    20%{
+        bottom: -10px;
+        right: 90%;
+    }
+
+    40%{
+        bottom: 60px;
+        right: 90%;
+    }
+
+    60%{
+        bottom: 60px;
+        right: -30px;
+    }
+
+    80%{
+        bottom: -10px;
+        right: -30px;
+    }
+
+    100%{
+        bottom: -10px;
+        right: 20%;
     }
 }
